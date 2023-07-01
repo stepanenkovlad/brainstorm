@@ -1,0 +1,57 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+* {
+  margin: 0;
+  font-family: "SF Pro Display";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  // background-color: #e7e7e7;
+  background-color: #fff;
+  border: 1px solid #cacaca;
+}
+
+body {
+  background-color: #f4f3e9;
+}
+
+@import "header";
+@import "choice";
+@import "text";
+@import "process";
+@import "naming";
+
+.process {
+  // width: 100%;
+  // height: 50%;
+  // background-color: #999;
+  // margin-top: 20px;
+  button {
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 30px;
+    background-color: #fff;
+  }
+}
+
+.d-n {
+  display: none;
+}
+.naming {
+  margin-top: 20px;
+}

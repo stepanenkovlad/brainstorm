@@ -1,0 +1,50 @@
+.process {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-top: 30px;
+  }
+  input {
+    border: 4px solid #000000;
+    border-radius: 30px;
+    width: 1000px;
+    height: 70px;
+    font-size: 27px;
+    font-weight: 600;
+    padding: 0 12px;
+    margin-top: 20px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 310px;
+    overflow-y: auto;
+    margin-top: 10px;
+    li {
+      font-size: 25px;
+      font-weight: 500;
+      width: 900px;
+      // background: #d9d9d9; серый
+      // background: #e5e4cd; ну такое
+      background: #dfded3;
+      border-radius: 30px;
+      height: 50px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      margin-right: 5px;
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+}
