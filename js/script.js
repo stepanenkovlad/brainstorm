@@ -107,7 +107,7 @@ function startTimer() {
 
         headerBtn.classList.toggle("header__btn_notclickable");
       } else {
-        location.reload();
+        resetEverything();
       }
     }
     let hours = Math.trunc(timeSeconds / 60 / 60);
