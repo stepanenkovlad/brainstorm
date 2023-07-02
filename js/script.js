@@ -12,9 +12,22 @@ const choiceSection = document.querySelector("#js-choice");
 const headerBtn = document.querySelector("#headerBtn");
 const header = document.querySelector(".header");
 
+btnStartNode.addEventListener("click", startTimer);
+btnStartNode.addEventListener("click", openInput);
+btnStopNode.addEventListener("click", stopTimer);
+formNode.addEventListener("submit", addIdea);
+nameInput.closest("form").addEventListener("submit", nameYourBrainstorm);
+brainstormsList.addEventListener("click", deleteIdea);
+brainstormsList.addEventListener("click", copyIdea);
+headerBtn.addEventListener("click", openBrainstormlist);
+
 let timeMinutes;
 let timeSeconds;
 
+let rotation = 0;
+let isOpened = false;
+
+let ideas = [];
 let brainstorms = [];
 
 if (localStorage.getItem("brainstorms")) {
@@ -46,19 +59,6 @@ function renderAfterNaming() {
     brainstormsList.insertAdjacentHTML("beforeend", text);
   });
 }
-
-let ideas = [];
-
-btnStartNode.addEventListener("click", startTimer);
-btnStartNode.addEventListener("click", openInput);
-btnStopNode.addEventListener("click", stopTimer);
-formNode.addEventListener("submit", addIdea);
-nameInput.closest("form").addEventListener("submit", nameYourBrainstorm);
-brainstormsList.addEventListener("click", deleteIdea);
-brainstormsList.addEventListener("click", copyIdea);
-headerBtn.addEventListener("click", openBrainstormlist);
-let rotation = 0;
-let isOpened = false;
 
 function openBrainstormlist(event) {
   if (isOpened) {
@@ -113,13 +113,11 @@ function startTimer() {
     let hours = Math.trunc(timeSeconds / 60 / 60);
     let minutes = Math.trunc((timeSeconds / 60) % 60);
     let seconds = Math.trunc(((timeSeconds / 60) * 60) % 60);
-
     let finalStr = `${hours}:${minutes}:${seconds}`;
     outputNode.innerHTML = finalStr;
     timeSeconds--;
   };
   let interval = setInterval(timer, 1000);
-
   inputNode.value = "";
 }
 
