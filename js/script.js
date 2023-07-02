@@ -17,29 +17,6 @@ let timeSeconds;
 
 let brainstorms = [];
 
-// if (localStorage.getItem("brainstorms")) {
-//   brainstorms = JSON.parse(localStorage.getItem("brainstorms"));
-//   brainstorms.forEach((ideas, index) => {
-//     let lastIndex = ideas.length - 1;
-//     let name = ideas[lastIndex];
-//     let string = "";
-
-//     for (let i = 0; i < ideas.length - 1; i++) {
-//       idea = ideas[i];
-//       string += `${idea.text} `;
-//     }
-
-//     const text = `<li>
-//     <div><b>${name.text} </b>
-//     ${string}</div>
-
-//     <div><button class='deleteBtn' data-action="delete" value='${index}'>Удалить</button><br></div>
-//     </li>
-//     `;
-//     brainstormsList.insertAdjacentHTML("beforeend", text);
-//   });
-// }
-
 if (localStorage.getItem("brainstorms")) {
   renderAfterNaming();
 }
@@ -51,10 +28,13 @@ function renderAfterNaming() {
     let name = ideas[lastIndex];
     let string = "";
 
-    for (let i = 0; i < ideas.length - 1; i++) {
+    for (let i = 0; i < ideas.length - 2; i++) {
       idea = ideas[i];
-      string += `${idea.text} `;
+      string += `${idea.text}, `;
     }
+
+    ideaWOComma = ideas[ideas.length - 2];
+    string += `${ideaWOComma.text} `;
 
     const text = `<li>
     <div><b>${name.text} </b>
@@ -90,7 +70,6 @@ function openBrainstormlist(event) {
     choiceSection.classList.toggle("d-n");
     isOpened = !isOpened;
   }
-  // const header = event.target.closest(".header");
   header.classList.toggle("header__opened");
   rotation += 180;
   headerBtn.style.transform = `rotate(${rotation}deg)`;
@@ -106,8 +85,6 @@ function startTimer() {
     inputNode.focus();
     return;
   }
-  // btnStartNode.setAttribute("disabled", "disabled");
-  // outputNode.classList.remove("d-n");
 
   headerBtn.classList.toggle("d-n");
   btnStopNode.classList.toggle("d-n");
@@ -125,7 +102,6 @@ function startTimer() {
       btnStopNode.classList.toggle("d-n");
 
       clearInterval(interval);
-      // outputNode.classList.add("d-n");
       if (ideas.length > 0) {
         nameInput.closest("section").classList.toggle("d-n");
 
@@ -156,7 +132,6 @@ function openInput(event) {
     return;
   }
   processNode.classList.toggle("d-n");
-  // brainstormsList.classList.toggle("d-n");
   choiceSection.classList.toggle("d-n");
   const func = () => {
     if (timeSeconds < 0) {
@@ -201,7 +176,6 @@ function nameYourBrainstorm(event) {
 
   ideas.push(idea);
   addToBrainstorms(ideas);
-  // location.reload();
 
   headerBtn.classList.toggle("header__btn_notclickable");
   resetEverything();
@@ -265,7 +239,6 @@ function changeHtmlOnCOpy(li) {
     sibling = sibling.nextSibling;
     sibling.nodeType == 1 && siblings.push(sibling);
   }
-  // return siblings;
 
   siblings.forEach((el) => {
     let btn = el.querySelector("button");

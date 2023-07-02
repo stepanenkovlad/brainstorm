@@ -21,7 +21,6 @@ input::-webkit-inner-spin-button {
 
 *::-webkit-scrollbar-track {
   border-radius: 10px;
-  // background-color: #e7e7e7;
   background-color: #fff;
   border: 1px solid #cacaca;
 }
@@ -37,10 +36,6 @@ body {
 @import "naming";
 
 .process {
-  // width: 100%;
-  // height: 50%;
-  // background-color: #999;
-  // margin-top: 20px;
   button {
     margin: 0 auto;
     margin-top: 50px;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brainstorm for debiloff</title>
+    <title>Brainstorm</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -23,18 +23,17 @@
     </header>
 
     <section class="choice" id="js-choice">
-      <p class="t35b">Choose the amount of time here:</p>
+      <p class="t35b">Введите нужное вам время:</p>
       <input required type="number" id="js-input" class="t14r" />
-      <p class="choice__minutes">Minutes</p>
-      <p class="choice__text">And press this button when you’ll be ready :)</p>
-      <button class="t35b" id="js-btn-start">start</button>
+      <p class="choice__minutes">Минуты</p>
+      <p class="choice__text">И нажмите на эту кнопку когда будете готовы :)</p>
+      <button class="t35b" id="js-btn-start">старт</button>
     </section>
 
     <section class="process d-n" id="js-process">
-      <p class="process__1 t35b">Time left</p>
+      <p class="process__1 t35b">Оставшееся время</p>
       <div id="js-output" class="t35b"></div>
-      <!-- <button id="js-btn-stop">stop</button> -->
-      <p class="process__2">Type your ideas here:</p>
+      <p class="process__2">Вводите ваши идеи здесь:</p>
       <form id="form">
         <input type="text" id="ideaInput" placeholder="Текст идеи" required />
       </form>
@@ -42,15 +41,10 @@
     </section>
 
     <section class="naming d-n" id="nameDiv">
-      <h2 class="naming__title t35b">Name your Brainstorm:</h2>
+      <h2 class="naming__title t35b">Назовите ваш брейншторм</h2>
       <form>
-        <input
-          id="nameInput"
-          type="text"
-          placeholder="Назовите ваш брейншторм"
-          required
-        />
-        <button type="submit" class="t35b">save</button>
+        <input id="nameInput" type="text" placeholder="Название" required />
+        <button type="submit" class="t35b">сохранить</button>
       </form>
     </section>
 
