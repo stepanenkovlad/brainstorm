@@ -2,9 +2,11 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
 * {
   margin: 0;
-  font-family: "SF Pro Display";
+  // font-family: "SF Pro Display";
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

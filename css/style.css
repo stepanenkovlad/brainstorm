@@ -4,7 +4,7 @@ input::-webkit-inner-spin-button {
 
 * {
   margin: 0;
-  font-family: "SF Pro Display";
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
